@@ -6,4 +6,20 @@
 
 !.config/
 !.config/i3/
-!.config/i3/config
+!.config/i3/*
+!.config/polybar/
+!.config/polybar/**
+!.config/rofi/
+!.config/rofi/**
+!.config/alacritty/
+!.config/alacritty/**
+!.config/dunst/
+!.config/dunst/**
+!.config/gtk-2.0/
+!.config/gtk-2.0/**
+!.config/gtk-3.0/
+!.config/gtk-3.0/**
+!.config/gtk-4.0/
+!.config/gtk-4.0/**
+!.config/wallpapers/
+!.config/wallpapers/**
