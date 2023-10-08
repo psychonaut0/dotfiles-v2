@@ -3,6 +3,7 @@
 .cache
 
 !.gitignore
+!.gitmodules
 
 !.config/
 !.config/i3/
@@ -33,3 +34,5 @@
 !.zshrc.d/
 !.zshrc.d/**
 !.vimrc
+!.oh-my-zsh/
+!.oh-my-zsh/**
