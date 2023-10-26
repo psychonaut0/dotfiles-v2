@@ -1,6 +1,4 @@
-#### I3 CONFIG FILE ####
-
-### VARIABLES ###
+#### I3 CONFIG FILE ### VARIABLES ###
 # Workspace variables
 set $ws1 "1"
 set $ws2 "2"
@@ -95,6 +93,8 @@ default_border pixel 0
 default_floating_border pixel 0
 for_window [class="^.*"] border pixel 0
 gaps inner 20
+gaps top 60
+gaps bottom 40
 
 # Title alignment
 title_align left
@@ -216,6 +216,7 @@ bindsym $mod+Shift+c restart
 
 # Exec binds
 bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+d exec --no-startup-id rofi -show drun -config .config/rofi/launcher.rasi
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run -config .config/rofi/launcher.rasi
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
@@ -224,16 +225,17 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -1%
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/scripts/volume_increase_with_boundary.sh 150 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5
+bindsym XF86MonBrightnessDown exec --no-startup-id sh ~/scripts/brightness_decrease_with_boundary.sh
 bindsym Print exec escrotum
+bindsym $mod+b exec --no-startup-id brave
 
 ######
 
 ### AUTOSTART ###
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id ~/scripts/i3-alternating-layout/alternating_layouts.py
-exec --no-startup-id picom -bcf --animations --animation-for-open-window 'zoom' -i 0.95 --corner-radius 8
-exec --no-startup-id wal -i .config/wallpapers/
-bar {
-        status_command i3status
-}
+exec --no-startup-id picom -bcf --animations --animation-for-open-window 'zoom' -i 0.95 --corner-radius 16
+exec --no-startup-id wal -R
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
 ######

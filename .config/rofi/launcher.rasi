@@ -8,12 +8,12 @@
  **/
 
 configuration {
-	modi: 						"drun";
-	icon-theme: 				"Papirus-Dark";
+	modi: 				"drun";
+	icon-theme: 			"Adwaita";
 	application-fallback-icon: 	"Adwaita";
-        show-icons:                 true;
-	drun-display-format:        "{name}";
-	sidebar-mode: 				false;
+        show-icons:                 	true;
+	drun-display-format:        	"{name}";
+	sidebar-mode: 			false;
 }
 @theme "~/.cache/wal/colors-rofi-dark.rasi"
 /*****----- Global Properties -----*****/
@@ -64,11 +64,10 @@ listbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    padding:                     60px 60px 65px;
+    padding:                     10px 10px 15px;
     margin:			 0px;
-    background-color:            transparent;
+    background-color:            @background;
 
-    background-image:            url("~/.config/rofi/cr-rofi.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
@@ -79,7 +78,7 @@ textbox-prompt-colon {
     str:                         "$";
     padding:                     12px 15px;
     border-radius:               8px;
-    background-color:            @background;
+    background-color:            @selected-normal-background;
     text-color:                  inherit;
 }
 entry {
@@ -87,7 +86,7 @@ entry {
     expand:                      true;
     padding:                     12px 16px;
     border-radius:               8px;
-    background-color:            @background;
+    background-color:            @selected-normal-background;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
@@ -112,7 +111,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     0px;
+    spacing:                     4px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
@@ -121,9 +120,10 @@ listview {
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     8px;
-    border-radius:               4px;
+    spacing:                     20px;
+    margin:			 0px 8px;
+    padding:                     14px;
+    border-radius:               8px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;

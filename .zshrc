@@ -1,3 +1,4 @@
+#zmodload zsh/zprof
 #
 #If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -71,7 +72,8 @@ ZSH_THEME="fox"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+zstyle ':omz:plugins:nvm' lazy yes
+plugins=(git nvm zsh-syntax-highlighting zsh-autosuggestions fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,11 +97,11 @@ setopt globdots
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-eval $(thefuck --alias)
 
 # Following line was automatically added by arttime installer
-export PATH=/home/psy/.local/bin:$PATH
-source /usr/share/nvm/init-nvm.sh
+#export PATH=/home/psy/.local/bin:$PATH
+#source /usr/share/nvm/init-nvm.sh
 
 # Created by `pipx` on 2023-07-28 22:18:38
 export PATH="$PATH:/home/psy/.local/bin"
+#zprof

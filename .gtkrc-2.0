@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/psy/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-xresources2"
-gtk-icon-theme-name="oomox-xresources-reverse"
+gtk-theme-name="oomox-xresources-reverse"
+gtk-icon-theme-name="Reversal-dark"
 gtk-font-name="Noto Sans,  10"
 gtk-cursor-theme-name="volantes_cursors"
 gtk-cursor-theme-size=24

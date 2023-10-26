@@ -34,6 +34,3 @@
 !.zshrc.d/
 !.zshrc.d/**
 !.vimrc
-!.oh-my-zsh/
-!.oh-my-zsh/custom/
-!.oh-my-zsh/custom/**

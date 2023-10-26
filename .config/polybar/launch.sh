@@ -10,4 +10,7 @@ foreground=$color7
 tertiary=$color2
 fourth=$color4
 
-polybar --reload main &
+polybar --reload main-top-left &
+polybar --reload main-top-right &
+polybar --reload main-top-center &
+polybar --reload main-bottom &
